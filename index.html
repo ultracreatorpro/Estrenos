@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrenos 2024</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      background-color: red;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 20px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .grid-item {
+      cursor: pointer;
+    }
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: black;
+      padding: 20px;
+      width: 80%;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+    video {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    Categoría: Estrenos 2024
+  </div>
+
+  <div class="grid-container">
+    <!-- Repeat these blocks for 20 movie covers -->
+    <div class="grid-item" data-video="https://dl.dropbox.com/scl/fi/oj1rzvo4dk2viyn4d492h/1_5023877689136645260.mp4?rlkey=c7lpw43eho4gw0iqgaqzv4z1b&st=le2brsag&dl=0">
+      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/jtEZi4eZxDjxcDIeMbkQ8HmvRs1.jpg" alt="Portada 1">
+    </div>
+    <div class="grid-item" data-video="https://dl.dropbox.com/scl/fi/9twgu9sfca7df414pwd98/Perspectiva.mp4?rlkey=qfa9kzbmggqvm2kxza4a5rvre&dl=0">
+      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/e7jW5JDUsXQAgmCgNSvi0vnKqkI.jpg" alt="Portada 2">
+    </div>
+    <div class="grid-item" data-video="https://dl.dropbox.com/scl/fi/a40mw5j2zpz2z6knpvlx9/PS3MOVIE-..mp4?rlkey=flr1q2rqwrfc3vuqwelfn6ri1&dl=0">
+      <img src="https://i.ibb.co/VQ5M4vq/IMG-20240626-001614-583.jpg" alt="Portada 3">
+    </div>
+    <div class="grid-item" data-video="https://dl.dropbox.com/scl/fi/rac4mp0hjgx9b5gn17xca/1920x960-Harold-y-su-cray-n-m-gico.mp4?rlkey=06iqbd5fhea4skgbn2l651awe&st=7fy04fum&dl=0">
+      <img src="https://image.tmdb.org/t/p/original/l9slQ1zMnE9fDH4uF0Zk542IC3H.jpg" alt="Portada 4">
+    </div>
+    <div class="grid-item" data-video="https://archive.org/download/n-0-n-3g-0-c-1abl-3-1/N0%20n3g0C1abl3_1.mp4">
+      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/2kEL2QFPyqGcFhGvzVos58dQXKS.jpg" alt="Portada 5">
+    </div>
+    <div class="grid-item" data-video="https://dl.dropbox.com/scl/fi/14dz3i9nn0bju6dxu3udm/Grandes-Esp-as-Misi-n-Italia.mp4?rlkey=shv3u3te613a9sheo95u51epu&dl=0">
+      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/ghlwOez45gndnAp3aPMzg5kxMjp.jpg" alt="Portada 6">
+    </div>
+    <div class="grid-item" data-video="https://dl.dropbox.com/scl/fi/8988y8hmdog4vt4l2d6zx/Solo-una-noche-de-juegos.mp4?rlkey=6vet9zch5m8xnue5jth8wfdhj&dl=0">
+      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/d6mQAufyjfqGhRcvqTKAmUV6QRo.jpg" alt="Portada 7">
+    </div>
+    <div class="grid-item" data-video="https://dl.dropbox.com/scl/fi/uj0ta097dwrl5qc9seic8/El-precio-de-la-novia.mp4?rlkey=7qn04bwv6ogm0eb0xv9micorj&dl=0">
+      <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/9QusyGRq3X8zmbrqGM1ynGuPFB5.jpg" alt="Portada 8">
+    </div>
+    <div class="grid-item" data-video="https://dl.dropbox.com/scl/fi/j8esxme8h5lqpbicaks4c/4sunt0f4m1l14r.mp4?rlkey=v8y4ftrlfx8qrh4qlovxopcr7&st=smko9znp&dl=0">
+      <img src="https://i.ibb.co/wzRK94H/a-family-affair-639912317-large.jpg" alt="Portada 9">
+    </div>
+    <div class="grid-item" data-video="https://dl.dropbox.com/scl/fi/m962sll7y7yog42u3vkey/El-diario-de-Noa.mp4?rlkey=qsa7vc5tupodefed6upjs45p5&st=a7b0jq9k&dl=0">
+      <img src="https://i.ibb.co/z6742S0/el-diario-de-noa.jpg" alt="Portada 10">
+    </div>
+    <!-- Add more movie covers as needed -->
+  </div>
+
+  <!-- Modal for video playback -->
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal"></span>
+      <video id="videoPlayer" controls>
+        <source src="" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    // Get modal and elements
+    const modal = document.getElementById("videoModal");
+    const videoPlayer = document.getElementById("videoPlayer");
+    const closeModal = document.getElementById("closeModal");
+
+    // Add click event to each movie cover
+    document.querySelectorAll('.grid-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const videoSrc = this.getAttribute('data-video');
+        videoPlayer.src = videoSrc;
+        modal.style.display = "block";
+        videoPlayer.play();
+      });
+    });
+
+    // Close modal function
+    function closeModalFunction() {
+      modal.style.display = "none";
+      videoPlayer.pause();
+      videoPlayer.src = ""; // Clear the video source
+    }
+
+    // Close modal when user clicks on close button
+    closeModal.onclick = closeModalFunction;
+
+    // Close modal when user clicks outside of the modal content
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        closeModalFunction();
+      }
+    }
+  </script>
+
+</body>
+</html>
